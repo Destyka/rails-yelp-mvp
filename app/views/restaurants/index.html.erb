@@ -1,0 +1,12 @@
+<div class="banner d-flex justify-content-center">
+  <div class="fs-1 text-light">
+    Welcome
+  </div>
+</div>
+<ul class="shadow-sm card m-2 p-3 bg-light">
+  <% @restaurants.each do |restaurant| %>
+   <%= link_to restaurant.name, restaurant_path(restaurant), class:"text-decoration-none"%>
+  <% end %>
+</ul>
+
+<%= link_to 'create', new_restaurant_path, class:"btn btn-primary"%>
